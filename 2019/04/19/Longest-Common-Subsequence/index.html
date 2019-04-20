@@ -96,16 +96,18 @@
 
 
 
-  <meta name="description" content="让森林里的老虎全都融化成黄油">
-<meta property="og:type" content="website">
-<meta property="og:title" content="青水坑">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="问题描述最长公共子序列是一类常考察的算法题目，具体来说，给定两个字符串s1与s2，寻找其最长公共子序列的长度。公共子序列指的是在s1与s2中都出现过并且出现顺序与母串保持一致的一系列字符。举个例子， 12string s1 = &quot;leetcode&quot;；string s2 = &quot;lintcode&quot;； 字符串&amp;quot;code&amp;quot;，&amp;quot;lt&amp;quot;都是满足公共子序列的情况，而最长的">
+<meta name="keywords" content="字符串,动态规划">
+<meta property="og:type" content="article">
+<meta property="og:title" content="最长公共子序列">
+<meta property="og:url" content="http://yoursite.com/2019/04/19/Longest-Common-Subsequence/index.html">
 <meta property="og:site_name" content="青水坑">
-<meta property="og:description" content="让森林里的老虎全都融化成黄油">
+<meta property="og:description" content="问题描述最长公共子序列是一类常考察的算法题目，具体来说，给定两个字符串s1与s2，寻找其最长公共子序列的长度。公共子序列指的是在s1与s2中都出现过并且出现顺序与母串保持一致的一系列字符。举个例子， 12string s1 = &quot;leetcode&quot;；string s2 = &quot;lintcode&quot;； 字符串&amp;quot;code&amp;quot;，&amp;quot;lt&amp;quot;都是满足公共子序列的情况，而最长的">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-04-20T05:50:19.237Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="青水坑">
-<meta name="twitter:description" content="让森林里的老虎全都融化成黄油">
+<meta name="twitter:title" content="最长公共子序列">
+<meta name="twitter:description" content="问题描述最长公共子序列是一类常考察的算法题目，具体来说，给定两个字符串s1与s2，寻找其最长公共子序列的长度。公共子序列指的是在s1与s2中都出现过并且出现顺序与母串保持一致的一系列字符。举个例子， 12string s1 = &quot;leetcode&quot;；string s2 = &quot;lintcode&quot;； 字符串&amp;quot;code&amp;quot;，&amp;quot;lt&amp;quot;都是满足公共子序列的情况，而最长的">
 
 
 
@@ -113,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/19/Longest-Common-Subsequence/">
 
 
 
@@ -123,7 +125,7 @@
   };
 </script>
 
-  <title>青水坑</title>
+  <title>最长公共子序列 | 青水坑</title>
   
 
 
@@ -171,8 +173,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -210,7 +211,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -323,9 +324,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -340,7 +341,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/19/First-Blog/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/19/Longest-Common-Subsequence/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="青水之人">
@@ -357,10 +358,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/04/19/First-Blog/" class="post-title-link" itemprop="url">First Blog</a>
+          <h1 class="post-title" itemprop="name headline">最长公共子序列
+
               
             
           </h1>
@@ -385,12 +384,24 @@
                 
               
 
-              <time title="创建时间：2019-04-19 13:15:40 / 修改时间：15:35:48" itemprop="dateCreated datePublished" datetime="2019-04-19T13:15:40+08:00">2019-04-19</time>
+              <time title="创建时间：2019-04-19 21:47:09" itemprop="dateCreated datePublished" datetime="2019-04-19T21:47:09+08:00">2019-04-19</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-20 13:50:19" itemprop="dateModified" datetime="2019-04-20T13:50:19+08:00">2019-04-20</time>
               
             
           </span>
@@ -407,7 +418,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/随笔/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a></span>
 
                 
                 
@@ -423,6 +434,13 @@
           
           
 
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
           
 
           
@@ -442,12 +460,14 @@
       
 
       
-        
-          
-            <p>记录那些年我踩过的坑</p>
+        <h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>最长公共子序列是一类常考察的算法题目，具体来说，给定两个字符串<code>s1</code>与<code>s2</code>，寻找其最长公共子序列的长度。公共子序列指的是在<code>s1</code>与<code>s2</code>中都出现过并且出现顺序与母串保持一致的一系列字符。举个例子，</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> s1 = <span class="string">"leetcode"</span>；</span><br><span class="line"><span class="built_in">string</span> s2 = <span class="string">"lintcode"</span>；</span><br></pre></td></tr></table></figure>
+<p>字符串<code>&quot;code&quot;</code>，<code>&quot;lt&quot;</code>都是满足公共子序列的情况，而最长的公共子序列为<code>&quot;ltcode&quot;</code>，其长度为6。最长公共子序列问题还可以衍生出许多其他问题，如。</p>
+ <a id="more"></a>
+<h1 id="问题求解"><a href="#问题求解" class="headerlink" title="问题求解"></a>问题求解</h1><h2 id="暴力算法"><a href="#暴力算法" class="headerlink" title="暴力算法"></a>暴力算法</h2><p>假设<code>s1</code>的长度为$m$，<code>s2</code>的长度为$n$，不妨设$ m \leq n $，对于<code>s1</code>，共有$2^m$种可能的子序列（可以看作每个字符都选择加不加入子序列），问题就转化为寻找一个子序列是否在<code>s2</code>中出现过，而每一个子序列的查询都是一个二重循环，最后的时间复杂度达到$O(mn\times 2^m)$ ，肯定是无法接受的。</p>
+<h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><p>暴力算法的问题在于没有利用已经求出来的信息，例如已经知道<code>&quot;cod&quot;</code>是<code>&quot;leetcode&quot;</code>与<code>&quot;lintcode&quot;</code>的公共子序列，那么又查询到两者之后都包含字符<code>&quot;e&quot;</code>，那么<code>&quot;code&quot;</code>显然也是公共子序列。这种后面的问题与前面的问题有关联的就可以考虑用递归或者动态规划了（关于递归，动态规划，记忆化搜索这几点可能需要单独整理一下）。动态规划有种空间换时间的想法，两者都需要对状态转移进行分析，此处只考虑动态规划。</p>
+<p>假设<code>dp[m][n]</code>代表<code>s1</code>与<code>s2</code>的公共子序列长度，<code>dp[i][j]</code>代表<code>s1</code>前<code>i+1</code>个字符与<code>s2</code>前<code>j+1</code>个字符的最长公共子序列长度。对于大于<code>0</code>的<code>i</code>与<code>j</code>，</p>
 
-          
-        
       
     </div>
 
@@ -468,14 +488,38 @@
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/字符串/" rel="tag"># 字符串</a>
+          
+            <a href="/tags/动态规划/" rel="tag"># 动态规划</a>
+          
+        </div>
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/19/First-Blog/" rel="next" title="First Blog">
+                <i class="fa fa-chevron-left"></i> First Blog
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </div>
@@ -485,14 +529,15 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -512,8 +557,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -601,6 +655,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#问题求解"><span class="nav-number">2.</span> <span class="nav-text">问题求解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#暴力算法"><span class="nav-number">2.1.</span> <span class="nav-text">暴力算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态规划"><span class="nav-number">2.2.</span> <span class="nav-text">动态规划</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -752,6 +823,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
 
   
 
@@ -768,6 +843,8 @@
   
 
 
+  
+
 
   
 
@@ -782,12 +859,48 @@
   
 
   
+  
+
   
     
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
       
-    
-  
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
 
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+    
   
 
 

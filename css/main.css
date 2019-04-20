@@ -1768,7 +1768,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #81ffe7;
+  background: #3e609c;
 }
 .feed-link,
 .chat {
@@ -2125,6 +2125,10 @@ pre .javascript .function {
   top: 50%;
   transform: translate(-50%, -50%);
   color: #ccc;
+}
+.has-jax {
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 .page-archive .archive-page-counter {
   position: relative;
@@ -2962,6 +2966,7 @@ ul.breadcrumb li+li:last-child {
 }
 body {
   background: url("/images/background.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
