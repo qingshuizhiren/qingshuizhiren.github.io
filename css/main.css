@@ -1768,7 +1768,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #3e609c;
+  background: #fe243d;
 }
 .feed-link,
 .chat {
@@ -1947,7 +1947,7 @@ pre .javascript .function {
 }
 .footer {
   font-size: 14px;
-  color: #999;
+  color: #87daff;
 }
 .footer img {
   border: none;
@@ -1958,7 +1958,7 @@ pre .javascript .function {
 .with-love {
   display: inline-block;
   margin: 0 5px;
-  color: #808080;
+  color: #87daff;
 }
 .powered-by,
 .theme-info {
