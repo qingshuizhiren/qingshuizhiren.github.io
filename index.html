@@ -385,12 +385,24 @@
                 
               
 
-              <time title="创建时间：2019-04-21 14:37:29 / 修改时间：14:40:29" itemprop="dateCreated datePublished" datetime="2019-04-21T14:37:29+08:00">2019-04-21</time>
+              <time title="创建时间：2019-04-21 14:37:29" itemprop="dateCreated datePublished" datetime="2019-04-21T14:37:29+08:00">2019-04-21</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-23 21:56:49" itemprop="dateModified" datetime="2019-04-23T21:56:49+08:00">2019-04-23</time>
               
             
           </span>
@@ -445,6 +457,11 @@
         
           
             <p>这一篇博客记录Hexo安装与定制遇到的一些坑，随时可能更新，很常见的就不记录了。</p>
+<h1 id="Mathjax显示"><a href="#Mathjax显示" class="headerlink" title="Mathjax显示"></a>Mathjax显示</h1><p>按照网上的教程下了<code>hexo-renderer-kramed</code>，命令是</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
+<p>并且替换了导致行内公式冲突的代码，也在博客中开启了<code>Mathjax</code>，但是最后还是没有显示公式，甚至行间公式也没有，排查了很久最后发现是CDN的问题，具体来说，在<code>/theme/next/_config.yml</code>中，提供了两个关于<code>Mathjax</code>的CDN地址，分别是</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cdn: //cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML</span><br><span class="line">cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML</span><br></pre></td></tr></table></figure>
+<p>在我的<code>next</code>主题中默认是注释第二个的，问题就在此处，我把第一个注释了使用第二个就可以正常显示公式了。当然对于不同人不同时间情况可能不一样就是了。</p>
 
           
         
