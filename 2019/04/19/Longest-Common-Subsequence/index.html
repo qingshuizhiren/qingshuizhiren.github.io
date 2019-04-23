@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="青水坑">
 <meta property="og:description" content="问题描述最长公共子序列是一类常考察的算法题目，具体来说，给定两个字符串s1与s2，寻找其最长公共子序列的长度。公共子序列指的是在s1与s2中都出现过并且出现顺序与母串保持一致的一系列字符。举个例子， 12string s1 = &quot;leetcode&quot;；string s2 = &quot;lintcode&quot;； 字符串&amp;quot;code&amp;quot;，&amp;quot;lt&amp;quot;都是满足公共子序列的情况，而最长的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-20T07:56:50.642Z">
+<meta property="og:updated_time" content="2019-04-23T12:52:09.898Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="最长公共子序列">
 <meta name="twitter:description" content="问题描述最长公共子序列是一类常考察的算法题目，具体来说，给定两个字符串s1与s2，寻找其最长公共子序列的长度。公共子序列指的是在s1与s2中都出现过并且出现顺序与母串保持一致的一系列字符。举个例子， 12string s1 = &quot;leetcode&quot;；string s2 = &quot;lintcode&quot;； 字符串&amp;quot;code&amp;quot;，&amp;quot;lt&amp;quot;都是满足公共子序列的情况，而最长的">
@@ -401,7 +401,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-20 15:56:50" itemprop="dateModified" datetime="2019-04-20T15:56:50+08:00">2019-04-20</time>
+                <time title="修改时间：2019-04-23 20:52:09" itemprop="dateModified" datetime="2019-04-23T20:52:09+08:00">2019-04-23</time>
               
             
           </span>
@@ -465,8 +465,10 @@
 <p>字符串<code>&quot;code&quot;</code>，<code>&quot;lt&quot;</code>都是满足公共子序列的情况，而最长的公共子序列为<code>&quot;ltcode&quot;</code>，其长度为6。最长公共子序列问题还可以衍生出许多其他问题，如。</p>
  <a id="more"></a>
 <h1 id="问题求解"><a href="#问题求解" class="headerlink" title="问题求解"></a>问题求解</h1><h2 id="暴力算法"><a href="#暴力算法" class="headerlink" title="暴力算法"></a>暴力算法</h2><p>假设<code>s1</code>的长度为$m$，<code>s2</code>的长度为$n$，不妨设$ m \leq n $，对于<code>s1</code>，共有$2^m$种可能的子序列（可以看作每个字符都选择加不加入子序列），问题就转化为寻找一个子序列是否在<code>s2</code>中出现过，而每一个子序列的查询都是一个二重循环，最后的时间复杂度达到$O(mn\times 2^m)$ ，肯定是无法接受的。</p>
-<h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><p>暴力算法的问题在于没有利用已经求出来的信息，例如已经知道<code>&quot;cod&quot;</code>是<code>&quot;leetcode&quot;</code>与<code>&quot;lintcode&quot;</code>的公共子序列，那么又查询到两者之后都包含字符<code>&quot;e&quot;</code>，那么<code>&quot;code&quot;</code>显然也是公共子序列。这种后面的问题与前面的问题有关联的就可以考虑用递归或者动态规划了（关于递归，动态规划，记忆化搜索这几点可能需要单独整理一下）。动态规划有种空间换时间的想法，两者都需要对状态转移进行分析，此处只考虑动态规划。</p>
-<p>假设<code>dp[m][n]</code>代表<code>s1</code>与<code>s2</code>的公共子序列长度，<code>dp[i][j]</code>代表<code>s1</code>前<code>i+1</code>个字符与<code>s2</code>前<code>j+1</code>个字符的最长公共子序列长度。对于大于<code>0</code>的<code>i</code>与<code>j</code>，</p>
+<h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><p>暴力算法的问题在于没有利用已经求出来的信息，例如已经知道<code>&quot;cod&quot;</code>是<code>&quot;leetcode&quot;</code>与<code>&quot;lintcode&quot;</code>的公共子序列，那么又查询到两者之后都包含字符<code>&quot;e&quot;</code>，那么<code>&quot;code&quot;</code>显然也是公共子序列。这种后面的问题与前面的问题有关联的就可以考虑用递归或者动态规划了（关于递归，动态规划，记忆化搜索这几点可能需要单独整理一下）。递归与动态规划两者都需要对状态转移进行分析，动态规划有种空间换时间的想法，，此处先只考虑动态规划。</p>
+<p>关于动态规划，之前看到一篇博客讲得很好，其主要思想即：跳出动态规划的细节，而关注每一个问题与其子问题的关系。如果以后找到这篇博客再补上来。</p>
+<p>在这道题中，假设<code>dp[m][n]</code>代表<code>s1</code>与<code>s2</code>的公共子序列长度，<code>dp[i][j]</code>代表<code>s1</code>前<code>i+1</code>个字符与<code>s2</code>前<code>j+1</code>个字符的最长公共子序列长度。如果追逐于细节，仔细考虑每个<code>dp[i][j]</code>是怎么得到的，只会越想越乱。因此我们只关注其整体，如果<code>s1[i]==s2[j]</code>，那么<code>dp[i][j]</code>明显等于<code>dp[i-1][j-1]+1</code>，而<code>dp[i-1][j-1]</code>是怎么得到的我们并不用去关心；类似的，如果<code>s1[i]!=s2[j]</code>，因为<code>s1[i]</code>可能与<code>s2</code>前<code>j</code>个字符有相匹配的字符，<code>s2[j]</code>也可能与<code>s1</code>前<code>i</code>个字符有相匹配的字符，所以<code>dp[i][j]</code>等于<code>max(dp[i-1][j],dp[i][j-1])</code>。当然了，对于<code>i==0</code>或者<code>j==0</code>的初始情况，还是需要自己考虑一下的。对于<code>i==0</code>的情况，如果<code>s1[i]==s2[j]</code>，<code>dp[i][j]=1</code>，否则<code>dp[i][j]=0</code>；对于<code>j==0</code>的情况，可以类似处理。或者建立<code>dp</code>数组时维度分别为<code>m+1</code>与<code>n+1</code>，将<code>i==0</code>或者<code>j==0</code>的情况直接置零，可以简化代码。</p>
+<p>总的来说，最长公共子序列是一道常见的动态规划的题目，而对于动态规划，把握住整体的问题变化，或者说能写出来状态转移方程是很重要的。当然，最长公共子序列还可以有许多衍生题目，如最长公共子串等。</p>
 
       
     </div>
